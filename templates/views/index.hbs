@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <title>Weather App</title>
+    <link rel="icon" href="/img/weather.png">
+</head>
+
+<body>
+    {{>header}}
+    <main>
+        <form id="search-form">
+            <div id="search-container"><input type="text" id="searchbox" autocomplete="off">
+                <button id="search-forecast-btn" disabled>Search forecast</button>
+            </div>
+
+        </form>
+        <div>
+            <p id="error"></p>
+            <p id="location"></p>
+            <p id="forecast"></p>
+        </div>
+    </main>
+    {{>footer}}
+</body>
+<script src="/js/index.js"></script>
+
+</html>
