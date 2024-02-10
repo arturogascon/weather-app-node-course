@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const geocode = (latitude, longitude, callback) => {
-  const WEATHERSTACK_URL = `http://api.weatherstack.com/current?access_key=e6a9e266ff5bf3a2f4c2d211352f4441&query=${latitude},${longitude}`;
+  const WEATHERSTACK_URL = `http://api.weatherstack.com/current?access_key=${process.env.WEATHERSTACK_API_KEY}&query=${latitude},${longitude}`;
 
   axios
     .get(WEATHERSTACK_URL)

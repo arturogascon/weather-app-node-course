@@ -7,8 +7,6 @@ const forecast = require('./utils/forecast');
 
 const app = express();
 
-const PORT = process.env.PORT;
-
 // Paths
 const publicDirectory = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
@@ -64,6 +62,6 @@ app.get('*', (req, res) => {
   res.render('404', {title: 'Help ', name: 'Arturo Gascon', errorMessage: '404 error. Page not found'});
 });
 
-app.listen(PORT, () => {
-  console.log('Server is up on port ' +  PORT);
+app.listen(process.env.PORT, () => {
+  console.log('Server is up on port ' + process.env.PORT);
 });
