@@ -1,4 +1,6 @@
 # Weather App
 
 ### Run the project with:
-`node .\src\app.js -e js,hbs`
+`npm run dev` for development mode
+or
+`npm run start` in production
